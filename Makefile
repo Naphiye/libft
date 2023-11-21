@@ -61,11 +61,7 @@ B = ${SRCBONUS:.c=.o}
 
 ${EXECUTABLE} : ${O}
 	${ARRC}  ${EXECUTABLE} ${O}
-	${RANLIB} ${EXECUTABLE}	
-
-so:
-	$(COMPIL) -nostartfiles -fPIC $(FLAGS) $(FILES) $(SRCBONUS)
-	gcc -nostartfiles -shared -o libft.so $(O) $(B)
+	${RANLIB} ${EXECUTABLE}
 
 all : ${EXECUTABLE}
 
