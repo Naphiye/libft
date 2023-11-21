@@ -6,7 +6,7 @@
 /*   By: fsalomon <fsalomon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 15:39:35 by fsalomon          #+#    #+#             */
-/*   Updated: 2023/11/21 11:21:09 by fsalomon         ###   ########.fr       */
+/*   Updated: 2023/11/21 11:41:06 by fsalomon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,28 +119,18 @@ char	**ft_split(char const *s, char c)
 	splitted = ft_split_it((char *)s, splitted, c);
 	return (splitted);
 }
-/* 
-int	main(void)
+
+/* int	main(void)
 {
 	char	**tab;
 	int		i;
 
-	tab = ft_split("  tripouille  42  ", ' ');
+	tab = ft_split("deidjie/dejdie/2233/deded/o", '/');
 	i = 0;
 	while (tab[i] != 0)
 	{
 		printf("%s \n", tab[i]);
 		i++;
 	}
-	printf("tab 2 = %s \n", tab[2]);
-	i = 0;
-	while (tab[i] != 0)
-	{
-		free(tab[i]);
-		i ++;
-	}
-	free(tab[i]);
-	free(tab);
 	return (0);
-}
- */
+} */
