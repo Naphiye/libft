@@ -6,7 +6,7 @@
 /*   By: fsalomon <fsalomon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:43:03 by fsalomon          #+#    #+#             */
-/*   Updated: 2023/11/09 11:19:46 by fsalomon         ###   ########.fr       */
+/*   Updated: 2024/04/13 16:37:21 by fsalomon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strdup(const char *s)
 	string_len = ft_strlen(s);
 	if (string_len == 2147483647)
 		return (NULL);
-	new_string = malloc(sizeof(char) * string_len + 1);
+	new_string = malloc(sizeof(char) * (string_len + 1));
 	if (!new_string)
 		return (NULL);
 	i = 0;

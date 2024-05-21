@@ -6,7 +6,7 @@
 /*   By: fsalomon <fsalomon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 11:15:45 by fsalomon          #+#    #+#             */
-/*   Updated: 2023/11/11 11:59:56 by fsalomon         ###   ########.fr       */
+/*   Updated: 2024/04/23 10:49:42 by fsalomon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*new_string;
 	int		index;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (NULL);
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	index = 0;
@@ -28,29 +32,26 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!new_string)
 		return (NULL);
 	ft_strlcpy(new_string, s1, s1_len + 1);
-	while (*new_string != 0)
-	{
-		new_string ++;
-		index ++;
-	}
+	index = s1_len;
+	new_string += index;
 	ft_strlcpy(new_string, s2, s2_len + 1);
 	new_string -= index;
 	return (new_string);
 }
-/* 
+/*
 #include <unistd.h>
 
 void	ft_print_result(char const *s)
 {
-	int		len;
+	int	len;
 
 	len = 0;
-	while (s[len])
+	while (s && s[len])
 		len++;
 	write(1, s, len);
 }
 
-int		main()
+int	main(void)
 {
 	char	s1[] = "lorem ipsum";
 	char	s2[] = "dolor sit amet";

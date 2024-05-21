@@ -6,7 +6,7 @@
 /*   By: fsalomon <fsalomon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:59:46 by fsalomon          #+#    #+#             */
-/*   Updated: 2023/11/07 15:47:41 by fsalomon         ###   ########.fr       */
+/*   Updated: 2024/04/13 16:30:57 by fsalomon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *str)
 	size_t	i;
 
 	i = 0;
-	while (str[i] != 0)
+	while (str && str[i] != 0)
 	{
 		i++;
 	}
